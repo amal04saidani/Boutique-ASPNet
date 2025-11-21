@@ -1,0 +1,11 @@
+# Fichiers de compilation et de build
+[Bb]in/
+[Oo]bj/
+# Fichiers de configuration utilisateur et de l'IDE
+*.suo
+*.user
+*.pdb
+*.vspscc
+*.vssscc
+# Packages NuGet (si vous ne voulez pas les inclure)
+/Packages/
