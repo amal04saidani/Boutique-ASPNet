@@ -1,0 +1,39 @@
+﻿
+@model Boutique.Models.Produit
+ @{
+    ViewData["Title"] = "Créer produit";
+}
+
+<h2>Créer un produit</h2>
+
+<form asp-action="Create" method="post">
+    <div class="mb-3">
+        <label asp-for="Nom" class="form-label"></label>
+        <input asp-for="Nom" class="form-control" />
+        <span asp-validation-for="Nom" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Prix" class="form-label"></label>
+        <input asp-for="Prix" class="form-control" />
+        <span asp-validation-for="Prix" class="text-danger"></span>
+    </div>
+    <div class="mb-3 form-check">
+        <input asp-for="EnStock" class="form-check-input" />
+        <label asp-for="EnStock" class="form-check-label"></label>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Catégorie</label>
+        <select asp-for="CategorieId" class="form-select" asp-items="ViewBag.Categories">
+            <option value="">-- Choisir une catégorie --</option>
+        </select>
+        <span asp-validation-for="CategorieId" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Créer</button>
+    <a asp-action="Index" class="btn btn-secondary">Annuler</a>
+</form>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
