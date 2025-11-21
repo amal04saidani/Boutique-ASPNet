@@ -55,6 +55,8 @@ Pour lancer ce projet sur votre machine :
     dotnet watch run
     ```
 4.  Ouvrez votre navigateur et naviguez vers `https://localhost:<PORT>` (par exemple, `https://localhost:7044`).
+5.  Naviguer vers /Produits/Create (par exemple, `https://localhost:7044/Produits/Create`).
+6.  Naviguer vers /Catégorie/Create (par exemple, `https://localhost:7044/Catégorie/Create`).
 
 ---
 
